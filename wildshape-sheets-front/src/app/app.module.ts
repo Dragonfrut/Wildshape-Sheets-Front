@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -8,6 +9,9 @@ import { NavigationBarComponent } from './core/components/navigation-bar/navigat
 import { LoginComponent } from './public/components/login/login.component';
 import { RegisterComponent } from './public/components/register/register.component';
 import { HomeComponent } from './public/components/home/home.component';
+import { DefaultsheetComponent } from './private/components/defaultsheet/defaultsheet.component';
+import { FormsModule } from '@angular/forms';
+
 
 
 @NgModule({
@@ -17,12 +21,16 @@ import { HomeComponent } from './public/components/home/home.component';
     LoginComponent,
     RegisterComponent,
     HomeComponent,
+    DefaultsheetComponent,
+
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

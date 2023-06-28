@@ -26,7 +26,7 @@ export class RegisterComponent {
       };
       this.http.post("https://localhost:7156/api/User", newUser).subscribe(data => {
         console.log("data: " + data);
-        this.router.navigate(['/']);
+        this.router.navigate(['/login']);
 
       });
     }

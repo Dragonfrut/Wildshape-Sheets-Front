@@ -9,17 +9,17 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent {
 
-  public username : string = "";
+  public email : string = "";
   public password : string = "";
 
   constructor(public http : HttpClient, public router : Router){}
 
   login(username:string, password:string){
-    if(this.username === "" || this.password === ""){
+    if(this.email === "" || this.password === ""){
       console.log("incomplete login")
     } else {
       let loginDto = {
-        username : this.username,
+        email : this.email,
         password : this.password
       };
       this.http.post("https://localhost:7156/api/Authentication", loginDto).subscribe(token => {

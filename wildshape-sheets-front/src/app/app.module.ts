@@ -11,8 +11,11 @@ import { RegisterComponent } from './public/components/register/register.compone
 import { HomeComponent } from './public/components/home/home.component';
 import { DefaultsheetComponent } from './private/components/defaultsheet/defaultsheet.component';
 import { FormsModule } from '@angular/forms';
+import { JwtModule } from '@auth0/angular-jwt';
 
-
+export function tokenGetter(){
+  return localStorage.getItem("jwt");
+}
 
 @NgModule({
   declarations: [
@@ -24,13 +27,21 @@ import { FormsModule } from '@angular/forms';
     DefaultsheetComponent,
 
 
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    JwtModule.forRoot({
+      config: {
+        tokenGetter: tokenGetter,
+        allowedDomains: ["localhost:7156"],
+        disallowedRoutes: []
+      }
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,8 +1,0 @@
-<div id="navbar">
-  <ul>
-  <li><a routerLink="">Home</a></li>
-  <li *ngIf="isUserAuthenticated()"><a routerLink="sheet">5e Sheet</a></li>
-	<li *ngIf="!isUserAuthenticated()"><a routerLink="login">Login</a></li>
-  <li *ngIf="isUserAuthenticated()"><a (click)="logOut()">Log Out</a></li>
-  </ul>
-</div>

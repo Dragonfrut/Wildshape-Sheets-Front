@@ -2,4 +2,4 @@
 
 npm install
 
-ng serve or npx ng serve
+npm run dev

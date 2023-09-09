@@ -24,7 +24,7 @@ export default function LoginPage() {
             placeholder="Email"
           />
           <input
-            className="mt-10 p-5 h-12 rounded-full bg-gray-100 border-none"
+            className="mt-10 p-5 h-12 rounded-full bg-gray-100 border-none text-gray-700"
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
@@ -36,7 +36,7 @@ export default function LoginPage() {
           >
             Sign In
           </button>
-          <p>Don't have an account?<a href='/register'>Register</a></p>
+          <p>Don't have an account? <a href='/register'>Register</a></p>
         </form>
       </div>
     

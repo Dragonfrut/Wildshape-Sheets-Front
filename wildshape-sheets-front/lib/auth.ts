@@ -69,5 +69,7 @@ export const authOptions: NextAuthOptions = {
       session.user = user || token;
       return session;
     }
-  }
+  },
+  secret: process.env.SECRET,
+  debug: true
 };

@@ -1,7 +1,16 @@
 import React from 'react'
+import RegisterForm from '../components/RegisterForm'
+
+export const metadata = {
+  title: "Register"
+}
 
 export default function Register() {
   return (
-    <div>Register</div>
+    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <div>
+      <RegisterForm />
+    </div>
+  </main>
   )
 }

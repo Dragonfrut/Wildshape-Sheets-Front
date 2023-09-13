@@ -4,12 +4,16 @@ import { useState } from "react";
 import Link from "next/link";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 
+import { useSession } from "next-auth/react";
+
 export default function Navbar() {
   const [menuIcon, setMenuIcon] = useState(false);
-
+  const { status } = useSession();
   const toggleMenu = () => {
     setMenuIcon(!menuIcon);
   };
+
+
 
   return (
     <header className="bg-slate-700 w-full fixed top-0 left-0 z-10">

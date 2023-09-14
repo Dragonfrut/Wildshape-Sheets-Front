@@ -3,9 +3,8 @@
 import { useState } from "react";
 import Link from "next/link";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
-
 import { signOut, useSession } from "next-auth/react";
-import router from "next/router";
+
 
 export default function Navbar() {
   const [menuIcon, setMenuIcon] = useState(false);
